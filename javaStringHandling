@@ -1,0 +1,175 @@
+1.Strings, which are widely used in Java programming,
+ are a sequence of characters.In Java programming language,
+ strings are treated as objects.
+eg1.
+public class demo{
+ 
+   public static void main(String args[])
+   
+ {
+     //char[] d={"a","b","h","i","."};
+
+      String z="hii ! abhi";
+ 
+     String y=new String("hello guys.");
+  
+    // String d=new String(d);
+ 
+    System.out.println(y);
+
+     System.out.println(z);
+
+    // System.out.println(d);
+
+    }
+
+  
+}
+output:hello guys.
+       hii ! abhi
+2.JAVA -StringBuffer and StringBuilder classes are used when there is a 
+necessity to make a lot of modification to string of characters.
+In the stringBuilder class was introduced as of java 5 and the main difference
+between the StringBuffer and StringBuilder is that StringBuilder methods are not thread safe.
+It is recommended to use StringBuilder whenever possible because it is faster than StringBuffer.
+ However, if the thread safety is necessary, the best option is StringBuffer objects.
+  
+
+eg2.
+public class demo2{
+    public static void main(String args[])
+    {
+     StringBuffer x= new StringBuffer("hello frnds");
+     x.append("\n i m using StringBuffer");
+     System.out.println(x);
+
+    }
+    
+}
+output:hello frnds
+        i m using StringBuffer
+note:
+{
+  Parameters:
+	Here is the detail of parameters:
+	? start -- The beginning index, inclusive.
+	? end -- The ending index, exclusive.
+ }
+this is the general example.
+now we'll start to discussed the StringBuffer methods->
+
+StringBuffer Methods:
+ 1.StringBuffer append(String s);
+ 2.StringBuffer reverse();
+ 3.public delete(int Start,int end);
+ 4.public insert(int offset,int i);
+ 5.public replace(int start,int end,string s);
+
+eg3.
+public class demo3{
+    public static void main(String args[])
+    {
+     StringBuffer x= new StringBuffer("hello frnds");
+     x.append("\n i m using StringBuffer");
+     System.out.println(x);
+     StringBuffer y=new StringBuffer("CODE");
+     y.reverse();
+     y.reverse();
+     System.out.println(y);
+     y.append(" for the facebook");
+     y.delete(13,21);
+     System.out.println(y);
+     y.insert(13,"Google");
+     System.out.println(y);
+
+     
+     System.out.println("but i want to became a coder of facebook");
+     y.replace(13,19,"Facebook");
+      System.out.println(y);  
+    }
+    
+}
+output:
+hello frnds
+ i m using StringBuffer
+CODE
+CODE for the 
+CODE for the Google
+but i want to became a coder of facebook
+CODE for the Facebook
+
+NOTE:
+hashcode:
+This method returns a hash code for this string. The hash code for a String object is computed as -
+
+s[0]*31^(n - 1) + s[1]*31^(n - 2) + ... + s[n - 1]
+Using int arithmetic, where s[i] is the ith character of the string, n is the length of the string,
+ and ^ indicates exponentiation. (The hash value of the empty string is zero.)
+
+eg:
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("ABHI");
+      System.out.println("Hashcode for Str :" + Str.hashCode() );
+   }
+}
+output:
+Hashcode for Str :2002146
+
+calculation:
+65*31^3+66*31^2+72*31^1+73*31^0=2002146
+  
+other methods which are very similar to string class.
+1.int capacity()
+2.char charAt(int index)
+3.void ensureCapacity(int minimumCapacity)
+4.void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+5.int indexOf(String str)
+6.int indexOf(String str, int fromIndex)
+7.int lastIndexOf(String str)
+8.int lastIndexOf(String str, int fromIndex)
+9.int length()
+10.void setCharAt(int index, char ch)
+11.void setLength(int newLength)
+12.CharSequence subSequence(int start, int end)
+13.String substring(int start)
+14.String substring(int start, int end)
+15.String toString()
+
+example:
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("coder");
+      int len=Str1.length(); //but here we can't use size()
+      System.out.println(len);
+     // *********************************************************
+       // concat of String
+        
+       String Str2="hello world";
+       String Str3=Str2.concat(Str1);//we concat the two string then we put whole value in the another string
+       System.out.println(Str3);
+       //we have another traits
+       String x="hello "+"world";
+       String y=Str1+Str2;
+       System.out.println(x);
+       System.out.println(y);
+       
+   }
+}
+Note:
+{
+FormatStrings:
+System.out.printf("My name is Abhishek sharma " +
+" I'm nitian " +
+"PTBN" +);
+ we can write :
+String f;
+f=String.format("My name is Abhishek sharma " +
+" I'm nitian " +
+"PTBN" +);
+System.out.println(f);
+}
