@@ -20,4 +20,4 @@ extern int yylval;
 . {return yytext[0];}
 [\t]+ ;
 \n {return 0;} 
-%
+%%
