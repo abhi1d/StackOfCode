@@ -25,7 +25,7 @@ setcolor(GREEN);
 line(ref + x1,ref + y1, ref + x2, ref + y2);
 
 // angle in degree
-th = 45;
+th = 90;
 r11=cos((th*3.1428)/180);
 r12=sin((th*3.1428)/180);
 r21=(-sin((th*3.1428)/180));
