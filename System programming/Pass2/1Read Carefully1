@@ -1,0 +1,4 @@
+important :
+       1. output1 came from pass1 and it contain MOT table values (hexadecimal address),relative address ,corresponding their mnemonic symbol.
+       2. sym1 also came from pass1 and it contain symbols and their values with realtive address.
+       3.output is the same as the source file but some symbol and their values have been changed.

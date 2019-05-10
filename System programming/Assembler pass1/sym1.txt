@@ -1,0 +1,4 @@
+LC	MneSym	Value
+14	FOUR	4
+18	FIVE	5
+22	TEMP	*

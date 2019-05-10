@@ -1,0 +1,4 @@
+LC	MneSym
+2	L
+6	A
+10	ST
